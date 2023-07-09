@@ -22,14 +22,9 @@ class FibonacciManager {
 
 	public int getNextNumber() {
 		if(this.numList.size() < 2) {
-			if(this.numList.size() == 0) {
-				return 0;
-			} else {
-				return 1;
-			}
+			return (this.numList.isEmpty()) ? 0 : 1;
 		} else {
-			int returnNumber = this.numList.get(this.numList.size()-1) + this.numList.get(this.numList.size()-2);
-			return returnNumber;
+			return this.numList.get(this.numList.size()-1) + this.numList.get(this.numList.size()-2);
 		}
 	}
 }
